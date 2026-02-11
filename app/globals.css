@@ -1,0 +1,258 @@
+:root {
+  --bg: #f8f9fb;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #4b5563;
+  --line: #e5e7eb;
+  --accent: #2f5d62;
+  --accent-soft: #d7e4e6;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0f172a;
+  --surface: #111827;
+  --text: #f3f4f6;
+  --muted: #cbd5e1;
+  --line: #1f2937;
+  --accent: #9ad1d4;
+  --accent-soft: #11353a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  width: min(1120px, 92vw);
+  margin: 0 auto 4rem;
+}
+
+.site-header {
+  width: min(1120px, 92vw);
+  margin: 1.25rem auto 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 1.35rem;
+}
+
+.theme-toggle {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+}
+
+.hero h1,
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading), Georgia, serif;
+  line-height: 1.1;
+}
+
+.hero {
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  margin: 0.5rem 0;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 68ch;
+}
+
+code {
+  background: var(--accent-soft);
+  border-radius: 6px;
+  padding: 0.1rem 0.3rem;
+}
+
+.featured {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.featured article a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.2rem;
+}
+
+.filter-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+input,
+select,
+.newsletter-form button {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.65rem 0.8rem;
+  font: inherit;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+.meta-row,
+.tag-list,
+.share-row {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.tag,
+.share-row a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.category {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.newsletter {
+  margin-top: 2.5rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  padding: 1.5rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.newsletter-form button {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+  cursor: pointer;
+}
+
+.success {
+  color: var(--accent);
+}
+
+.post-page {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.post-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+}
+
+.post-content {
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.post-content h2,
+.post-content h3 {
+  margin-top: 2rem;
+}
+
+.post-content a {
+  color: var(--accent);
+}
+
+.empty {
+  color: var(--muted);
+}
